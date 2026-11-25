@@ -86,10 +86,7 @@ body:not(.home) main{padding-top:calc(72px + env(safe-area-inset-top,0px))}
 .hero>.ph{position:absolute;inset:0;height:100%}
 .hero>.ph::after{top:auto;bottom:16px;left:auto;right:16px}
 .hero .in{position:relative;z-index:2;width:100%;padding-block:150px 56px;display:flex;flex-direction:column;gap:40px}
-.hero h1{font-size:clamp(44px,7.6vw,112px)}
-.hero h1 span{display:block}
-.hero h1 span:nth-child(2){padding-left:0;text-align:right}
-.hero h1 span:nth-child(3){padding-left:0}
+.hero h1{font-size:clamp(32px,3.6vw,54px);max-width:22ch}
 .hero .row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
 .hero .row p{max-width:30ch;font-size:16px}
 .hgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
@@ -281,14 +278,13 @@ a:hover .ul,.ul:hover{border-bottom-color:transparent;background-size:100% 1px}
 .f input,.f select,.f textarea{width:100%;min-width:0}
 @keyframes up{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
 @keyframes zoom{from{transform:scale(1.12)}to{transform:scale(1)}}
-.hero h1 span{animation:up 1s cubic-bezier(.2,.7,.2,1) both}
-.hero h1 span:nth-child(2){animation-delay:.15s}.hero h1 span:nth-child(3){animation-delay:.3s}
+.hero h1{animation:up 1s cubic-bezier(.2,.7,.2,1) both}
 .hero .hgrid{animation:up 1s .5s cubic-bezier(.2,.7,.2,1) both}
 .hero>.ph img,.phero>.ph img{animation:zoom 2.4s cubic-bezier(.2,.7,.2,1) both}
 .phero h1{animation:up 1s .1s cubic-bezier(.2,.7,.2,1) both}
 .rv{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .rv.in-v{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.hero h1 span,.hero .hgrid,.hero>.ph img,.phero>.ph img,.phero h1{animation:none}.rv{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero h1,.hero .hgrid,.hero>.ph img,.phero>.ph img,.phero h1{animation:none}.rv{opacity:1;transform:none}}
 @media (max-width:960px){
   nav.main,.hr .ldd,.hr .btn{display:none}
   .burger{display:block}
@@ -313,17 +309,12 @@ a:hover .ul,.ul:hover{border-bottom-color:transparent;background-size:100% 1px}
   .steps{grid-template-columns:1fr 1fr}
   .hero .side{align-items:flex-start;text-align:left}
   .hgrid{grid-template-columns:1fr 1fr}
-  .hero h1 span:nth-child(2){padding-left:0;text-align:right}
-  .hero h1 span:nth-child(3){padding-left:0}
-  .hero h1{font-size:6.6vw}
   .hgrid{row-gap:28px}
   .hgrid>div:last-child{align-items:flex-start}
 }
 @media (max-width:600px){
   body{font-size:15px}
-  .hero h1{font-size:8.4vw}
-  .hero h1 span:nth-child(2){padding-left:0}
-  .hero h1 span:nth-child(3){padding-left:0;text-align:right}
+  .hero h1{font-size:7.4vw}
   .hgrid{grid-template-columns:1fr 1fr;row-gap:24px}
   .hgrid>div:first-child,.hgrid>div:last-child{grid-column:1/-1}
   .st{min-height:170px}
@@ -445,7 +436,7 @@ main p,main li,footer p,.small,.pc .d,.ptitle p,.contact .l p,.cpg-r p,.stmt p,.
 /* аудит */
 body.home header:not(.solid)::before{content:"";position:absolute;inset:0 0 -40px;background:linear-gradient(180deg,rgba(20,12,8,.55),rgba(20,12,8,0));z-index:-1;pointer-events:none}
 header{isolation:isolate}
-@media (max-width:600px){.hero h1{font-size:7.2vw!important}}
+
 .cpg-wide{aspect-ratio:16/7;margin-bottom:72px}
 .cpg2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,120px);align-items:start}
 .cpg2 .cpg-r{gap:24px}
@@ -574,8 +565,8 @@ const projects=[
   {id:"project-1",hero:"v1",name:"Приватний будинок",type:"будинки",area:"000 кв.м",city:"Місто",year:"2025",d:"Заглушка: короткий опис проєкту в один рядок",cover:"v11",gal:["v1","v9","v7","v10","v3","v13","v4","v5","v8","v14","v15","v6","v16","v17","v18","v19","v20","v21","v22","v23"]},
   {id:"project-2",hero:"t2",name:"Будинок Тритон",type:"будинки",area:"200 кв.м",city:"Місто",year:"2025",d:"Заглушка: короткий опис проєкту в один рядок",cover:"t3",gal:["t1","t2","t3","t4","t5","t6","t7","t8","t9","t10","t11","t12","t13","t14","t15","t16","t17","t18","t19","t20","t21","t22","t23","t24","t25","t26","t27","t28","t29","t30","t31","t32","t33"]},
   {id:"project-3",hero:"w17",name:"Квартира у Варшаві",type:"квартири",area:"000 кв.м",city:"Варшава",year:"2024",d:"Заглушка: короткий опис проєкту в один рядок",cover:"w1",gal:["w1","w2","w3","w4","w5","w6","w7","w8","w9","w10","w11","w12","w13","w14","w15","w16","w17","w18","w19","w20","w21","w22","w23","w24","w25","w26","w27","w28","w29","w30","w31","w32","w33","w34","w35","w36","w37","w38","w39","w40","w41","w42","w43","w44","w45","w46","w47","w48","w49","w50","w51","w52","w53","w54","w55","w56","w57","w58","w59","w60","w61","w62","w63","w64","w65","w66","w67","w68","w69","w70","w71","w72","w73","w74","w75","w76","w77","w78"]},
-  {id:"project-4",hero:"j1",name:"Квартира Jutrzenki",type:"квартири",area:"000 кв.м",city:"Варшава",year:"2024",d:"Заглушка: короткий опис проєкту в один рядок",cover:"j1",gal:["j1","j2","j3","j4","j5","j6","j7","j8","j9","j10","j11","j12","j13","j14","j15","j16","j17","j18"]},
-  {id:"project-5",hero:"z9",name:"Квартира Żupnicza",type:"квартири",area:"310 кв.м",city:"Варшава",year:"2023",d:"Заглушка: короткий опис проєкту в один рядок",cover:"z9",gal:["z1","z2","z3","z4","z5","z6","z7","z8","z9","z10","z11","z12","z13","z14","z15","z16","z17","z18","z19","z20","z21","z22","z23","z24","z25","z26","z27"]},
+  {id:"project-4",hero:"j1",name:"Квартира Żupnicza",type:"квартири",area:"000 кв.м",city:"Варшава",year:"2024",d:"Заглушка: короткий опис проєкту в один рядок",cover:"j1",gal:["j1","j2","j3","j4","j5","j6","j7","j8","j9","j10","j11","j12","j13","j14","j15","j16","j17","j18"]},
+  {id:"project-5",hero:"z9",name:"Квартира Jutrzenki",type:"квартири",area:"000 кв.м",city:"Варшава",year:"2023",d:"Заглушка: короткий опис проєкту в один рядок",cover:"z9",gal:["z1","z2","z3","z4","z5","z6","z7","z8","z9","z10","z11","z12","z13","z14","z15","z16","z17","z18","z19","z20","z21","z22","z23","z24","z25","z26","z27"]},
   {id:"project-6",hero:"r1",name:"Будинок Rembertów",type:"будинки",area:"000 кв.м",city:"Варшава",year:"2023",d:"Заглушка: короткий опис проєкту в один рядок",cover:"r1",gal:["r1","r2","r3","r4","r5","r6","r7","r8","r9","r10","r11","r12","r13","r14","r15","r16","r17","r18","r19","r20","r21","r22","r23","r24","r25","r26","r27","r28","r29","r30","r31","r32","r33","r34","r35","r36","r37","r38","r39","r40"]},
   {id:"project-7",hero:"k31",name:"Будинок Золоті Ключі",type:"будинки",area:"000 кв.м",city:"Місто",year:"2023",d:"Заглушка: короткий опис проєкту в один рядок",cover:"k2",gal:["k1","k2","k3","k4","k5","k6","k7","k8","k9","k10","k11","k12","k13","k14","k15","k16","k17","k18","k19","k20","k21","k22","k23","k24","k25","k26","k27","k28","k29","k30","k31","k32","k33","k34","k35","k36","k37","k38","k39","k40","k41","k42","k43","k44","k45","k46","k47","k48","k49"]},
   {id:"project-8",hero:"c1",name:"Будинок в Царському селі",type:"будинки",area:"000 кв.м",city:"Місто",year:"2023",d:"Заглушка: короткий опис проєкту в один рядок",cover:"c1",gal:["c1","c2","c3","c4","c5","c6","c8","c9","c10","c11","c12","c13","c14","c15","c16","c17","c7","c18","c19","c20","c21","c22","c23","c24","c25","c26","c27","c28","c29","c30","c31","c32","c33","c34","c35"]},
@@ -587,9 +578,9 @@ const projects=[
   {id:"project-13",hero:"y3",name:"Ресторан Sisters",type:"комерційні",photo:true,area:"000 кв.м",city:"Варшава",year:"0000",d:"Заглушка: короткий опис проєкту в один рядок",cover:"y1",video:"img/sisters.mp4",photos:["y1","y2","y3","y4","y5","y6","y7","y8","y9"]}
 ];
 const services=[
-  {t:"Послуга 1",p:"від 0 грн",l:["Пункт 1","Пункт 2","Пункт 3"]},
-  {t:"Послуга 2",p:"від 0 грн",l:["Пункт 1","Пункт 2","Пункт 3"]},
-  {t:"Послуга 3",p:"від 0 грн",l:["Пункт 1","Пункт 2","Пункт 3"]}
+  {t:"Послуга 1",l:["Пункт 1","Пункт 2","Пункт 3"]},
+  {t:"Послуга 2",l:["Пункт 1","Пункт 2","Пункт 3"]},
+  {t:"Послуга 3",l:["Пункт 1","Пункт 2","Пункт 3"]}
 ];
 const G=["g1","g2","g3","g4"];
 const ph=(t,g,c="",s="")=>/^[vtwjzrkcnfsbdyqp]\d/.test(g)?`<div class="ph img ${c}" style="${s}"><img src="img/${g}.jpg" alt="" loading="lazy"></div>`:`<div class="ph ${g} ${c}" data-t="${t}" style="${s}"></div>`;
@@ -623,7 +614,7 @@ const pages={
 home:()=>`
 <section class="hero">${ph("","v1")}
   <div class="wrap in">
-    <h1><span>Створюємо затишні</span><span>і функціональні</span><span>простори під ключ</span></h1>
+    <h1>Створюємо затишні і функціональні простори під ключ</h1>
     <div class="hgrid">
       <div style="grid-column:4"><a class="btn light" href="#contacts">Отримати консультацію ${AR}</a></div>
     </div>
@@ -687,16 +678,12 @@ about:()=>`
     <div class="val"><h3>Ми уникаємо</h3><ul><li>Модних рішень, які набридають за рік</li><li>Декору заради декору</li><li>Меблів, незручних у щоденному житті</li></ul></div>
   </div>
 </div></section>
-<section class="pl"><div class="wrap">
-  <div class="sh"><h2>Команда</h2></div>
-  <div class="team">${[0,1,2,3].map(i=>`<div class="m">${i?ph("Фото","g3"):ph("","p2")}<b style="font-weight:500">Імʼя Прізвище</b><span>посада</span></div>`).join("")}</div>
-</div></section>
 ${contact}`,
 
 services:()=>`
 <div class="wrap ptitle"><h1>Послуги</h1></div>
 <section class="pl"><div class="wrap">
-  <div class="cards">${services.map((s,i)=>`<div class="card">${ph("",["t3","f13","f7"][i])}<div class="in"><h3>${s.t}</h3><ul>${s.l.map(x=>`<li>${x}</li>`).join("")}</ul><span class="price">${s.p}</span></div></div>`).join("")}</div>
+  <div class="cards">${services.map((s,i)=>`<div class="card">${ph("",["t3","f13","f7"][i])}<div class="in"><h3>${s.t}</h3><ul>${s.l.map(x=>`<li>${x}</li>`).join("")}</ul></div></div>`).join("")}</div>
 </div></section>
 <section class="ways on-dark"><div class="wrap">
   <div class="sh"><h2>Етапи роботи</h2></div>
