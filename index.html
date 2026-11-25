@@ -11,16 +11,16 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 :root{
   --cream:#EFE9E2;--cream2:#E5DCD2;--choc:#3A2219;--choc2:#24150F;--line:#C9BCAF;
   --fg:#2A1D17;--muted:#6E5E54;--light:#F5F0EA;
-  --head:"Inter Tight",system-ui,sans-serif;--body:"Inter Tight",system-ui,sans-serif;--hw:400;--case:uppercase;--ls:-.02em;--emst:normal;--emw:400;
+  --head:"Inter Tight",system-ui,sans-serif;--body:"Inter Tight",system-ui,sans-serif;--hw:400;--case:none;--ls:-.01em;--emst:normal;--emw:400;
 }
 *{box-sizing:border-box}
 body{background:var(--cream);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.5}
 a{color:inherit;text-decoration:none}
 p{margin:0}
 .wrap{max-width:1320px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-h1,h2,h3{font-family:var(--head);font-weight:var(--hw);text-transform:var(--case);letter-spacing:var(--ls);margin:0;line-height:.98;text-wrap:balance}
+h1,h2,h3{font-family:var(--head);font-weight:var(--hw);text-transform:var(--case);letter-spacing:var(--ls);margin:0;line-height:1.08;text-wrap:balance}
 h1 em,h2 em,h3 em{font-style:var(--emst);font-weight:var(--emw)}
-h2{font-size:clamp(36px,4.4vw,64px)}
+h2{font-size:clamp(28px,3.2vw,46px)}
 h3{font-size:24px;line-height:1.1}
 .small{font-size:14px;line-height:1.45}
 .up{font-size:13px;letter-spacing:.08em;text-transform:uppercase}
@@ -86,7 +86,8 @@ body:not(.home) main{padding-top:calc(72px + env(safe-area-inset-top,0px))}
 .hero>.ph{position:absolute;inset:0;height:100%}
 .hero>.ph::after{top:auto;bottom:16px;left:auto;right:16px}
 .hero .in{position:relative;z-index:2;width:100%;padding-block:150px 56px;display:flex;flex-direction:column;gap:40px}
-.hero h1{font-size:clamp(34px,4.2vw,64px);max-width:16ch;text-transform:none;letter-spacing:-.01em;line-height:1.08;font-weight:400}
+h1{font-size:clamp(34px,4.2vw,64px)}
+.hero h1{max-width:16ch}
 .hbtn{display:flex;gap:12px;flex-wrap:wrap}
 .hero .hb1{background:var(--light);color:var(--fg);border-color:var(--light)}
 .hero .row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
@@ -96,7 +97,7 @@ body:not(.home) main{padding-top:calc(72px + env(safe-area-inset-top,0px))}
 /* про студію + цифри */
 .about-h{display:flex;flex-direction:column;gap:32px}
 
-.lead{font-size:clamp(20px,2vw,26px);line-height:1.3;text-transform:uppercase;max-width:44ch;letter-spacing:-.005em}
+.lead{font-size:clamp(20px,2vw,26px);line-height:1.3;max-width:44ch}
 .lead b{font-weight:600}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px}
 .st{border:1px solid var(--line);margin:0 -1px -1px 0;min-height:230px;padding:18px;display:flex;flex-direction:column;justify-content:space-between}
@@ -179,7 +180,6 @@ body:not(.home) main{padding-top:calc(72px + env(safe-area-inset-top,0px))}
 
 /* портфоліо */
 .ptitle{padding-block:72px 0}
-.ptitle h1{font-size:clamp(48px,7vw,104px)}
 .ptitle p{margin-top:20px;max-width:50ch;color:var(--muted)}
 .ptabs{display:flex;gap:40px;flex-wrap:wrap;margin-bottom:28px}
 .ptabs button{background:none;border:0;border-bottom:1px solid transparent;padding:0 0 6px;font-family:var(--body);font-size:clamp(22px,2.4vw,32px);color:var(--muted);cursor:pointer;transition:color .25s,border-color .25s}
@@ -206,7 +206,6 @@ body:not(.home) main{padding-top:calc(72px + env(safe-area-inset-top,0px))}
 .phero{position:relative;min-height:max(520px,80vh);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--light);padding:0}
 .phero>.ph{position:absolute;inset:0;height:100%}
 .phero .in{position:relative;z-index:2;display:flex;flex-direction:column;gap:16px;align-items:center}
-.phero h1{font-size:clamp(48px,7vw,104px)}
 .pinfo{display:grid;grid-template-columns:repeat(4,1fr)}
 .pinfo div{border:1px solid var(--line);margin:0 -1px 0 0;padding:18px;display:flex;flex-direction:column;gap:6px}
 .pinfo span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
@@ -306,7 +305,7 @@ a:hover .ul,.ul:hover{border-bottom-color:transparent;background-size:100% 1px}
 }
 @media (max-width:600px){
   body{font-size:15px}
-  .hero h1{font-size:9vw}
+  h1{font-size:9vw}
   .hbtn .btn{flex:1 1 100%;justify-content:center}
   .st{min-height:170px}
   .pr,.pgrid,.cards,.team,.values,.gal,.steps,.pinfo{grid-template-columns:1fr}
@@ -354,7 +353,7 @@ h3,.ptabs button,.pnav strong{font-size:var(--t-h3)!important;line-height:1.15}
 .cpg-r{display:flex;flex-direction:column;gap:32px}
 .cpg-r form.cf{margin-top:8px}
 @media (max-width:900px){.cpg{grid-template-columns:1fr;gap:72px}.cpg-ph{display:none}}
-@media (max-width:600px){.stats .st{min-height:0;aspect-ratio:1/1}.stats .st.photo{grid-column:1/-1;aspect-ratio:2/1}.stats .st.photo .ph{min-height:0;height:100%}}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))!important}.stats .st{min-height:0;aspect-ratio:1/1;min-width:0}.stats .st .btn{padding:10px 12px;gap:8px}.stats .st.photo{grid-column:1/-1;aspect-ratio:2/1}.stats .st.photo .ph{min-height:0;height:100%}}
 .m-more{display:none}
 @media (max-width:600px){.sh .ul{display:none}.m-more{display:inline-flex;margin-top:40px}}
 @media (max-width:900px){.fq .fqp{aspect-ratio:4/5}.fq .fqp img{object-position:50% 15%}}
@@ -400,7 +399,7 @@ main p,main li,footer p,.small,.pc .d,.ptitle p,.contact .l p,.cpg-r p,.stmt p,.
  .cpg>*,.fq>*,.ways .g>*,.contact .g>*,.et>*,.stmt>*{min-width:0}
  form.cf{grid-template-columns:1fr!important}
  .cf .btn{white-space:normal}
- .stats{grid-template-columns:repeat(3,1fr)!important}
+ .stats{grid-template-columns:repeat(3,minmax(0,1fr))!important}
  .stats .st{min-height:180px;aspect-ratio:auto}
  .stats .st.empty{display:none}
  .stats .st.photo{grid-column:span 2}
@@ -438,7 +437,7 @@ header{isolation:isolate}
 .et-l{display:flex;flex-direction:column}
 .et-ph{flex:1;aspect-ratio:auto!important;min-height:420px}
 .et-r li div{max-width:46ch}
-.cfh{font-size:clamp(28px,2.6vw,40px)!important;line-height:1.1}
+.cfh{font-size:clamp(28px,3.2vw,46px)!important}
 .cpg2 .cpg-r{gap:16px}
 .cpg2 .cpg-r form.cf{margin-top:24px}
 .pc .ph.img img{object-position:50% 70%}
@@ -501,6 +500,7 @@ header{isolation:isolate}
 .steps .step b{font-size:80px!important;top:16px!important;right:24px!important}
 @media (max-width:1023px){.steps .step{padding-top:28px!important}.steps .step h3{padding-right:90px;min-height:56px}.steps .step b{font-size:64px!important;top:14px!important;right:18px!important}}
 .ph.img img[src*="img/f"],.ph.img img[src*="img/s"],.ph.img img[src*="img/y"],.ph.img img[src*="img/p"]{filter:saturate(.8) contrast(.94) brightness(1.02)}
+.st .btn{max-width:100%;white-space:normal;line-height:1.3}
 </style>
 </head>
 <body>
@@ -593,7 +593,7 @@ const statsBlock=`<div class="stats">
   <div class="st"><p class="small">Років досвіду в дизайні інтерʼєру</p><div class="bot"><b>20</b></div></div>
   <div class="st empty"></div>
   <div class="st"><p class="small">Реалізованих проєктів житлових і комерційних просторів</p><div class="bot"><b>300+</b></div></div>
-  <div class="st dark"><p class="small">Заглушка: коротка пропозиція консультації</p><a class="ul" href="#contacts">Звʼязатися</a></div>
+  <div class="st dark"><p class="small">Заглушка: коротка пропозиція консультації</p><a class="btn light" href="#contacts">Отримати консультацію ${AR}</a></div>
   <div class="st empty"></div>
   <div class="st"><p class="small">Заглушка: третя цифра від клієнта</p><div class="bot"><b>00</b></div></div>
   <div class="st empty"></div>
@@ -605,7 +605,7 @@ home:()=>`
 <section class="hero">${ph("","v1")}
   <div class="wrap in">
     <h1>Створюємо затишні і функціональні простори під ключ</h1>
-    <div class="hbtn"><a class="btn hb1" href="#contacts">Отримати консультацію ${AR}</a><a class="btn light" href="#portfolio">Переглянути проєкти</a></div>
+    <div class="hbtn"><a class="btn hb1" href="#contacts">Отримати консультацію ${AR}</a><a class="btn light" href="#portfolio">Переглянути проєкти ${AR}</a></div>
   </div>
 </section>
 
