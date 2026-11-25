@@ -27,7 +27,7 @@ h3{font-size:24px;line-height:1.1}
 .ul{font-size:13px;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:2px;align-self:flex-start}
 .btn{display:inline-flex;align-items:center;gap:14px;border:1px solid currentColor;background:transparent;color:inherit;padding:15px 26px;font-family:var(--body);font-size:13px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .25s,color .25s}
 .btn:hover{background:var(--fg);color:var(--light);border-color:var(--fg)}
-body.home header:not(.solid) .btn:hover,.on-dark .btn:hover,.btn.light:hover{background:var(--light);color:var(--choc2);border-color:var(--light)}
+.on-dark .btn:hover,.btn.light:hover{background:var(--light);color:var(--choc2);border-color:var(--light)}
 .btn.solid{background:var(--choc);color:var(--light);border-color:var(--choc)}
 .ar{width:22px;height:8px;stroke:currentColor;fill:none;flex:none}
 .btn{white-space:nowrap;align-self:flex-start}
@@ -281,7 +281,7 @@ a:hover .ul,.ul:hover{border-bottom-color:transparent;background-size:100% 1px}
 .rv.in-v{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.hero h1,.hero .hbtn,.hero>.ph img,.phero>.ph img,.phero h1{animation:none}.rv{opacity:1;transform:none}}
 @media (max-width:960px){
-  nav.main,.hr .ldd,.hr .btn{display:none}
+  nav.main,.hr .ldd{display:none}
   .burger{display:block}
   .hb{grid-template-columns:1fr auto}
   .mnav.open{display:flex;flex-direction:column;gap:0;padding-block:8px 32px;background:var(--cream);color:var(--fg);border-bottom:1px solid var(--line)}
@@ -518,7 +518,6 @@ header{isolation:isolate}
     </nav>
     <div class="hr">
       <div class="ldd" id="ldd"><button class="ldd-b" id="lddb" aria-haspopup="true" aria-expanded="false"><span id="lcur">UA</span><svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg></button><div class="ldd-m" id="lddm" hidden><button data-l="UA" class="on">UA</button><button data-l="EN">EN</button><button data-l="PL">PL</button></div></div>
-      <a class="btn" href="#contacts" style="padding:10px 18px">Консультація <svg class="ar" viewBox="0 0 22 8"><path d="M0 4h21M17 .5L21 4l-4 3.5"/></svg></a>
       <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><i></i><i></i></button>
     </div>
   </div>
